@@ -9,6 +9,12 @@ import TablesEvent from './components/views/TablesEvent/TablesEvent';
 import Waiter from './components/views/Waiter/Waiter';
 import WaiterOrder from './components/views/WaiterOrder/WaiterOrder';
 import Kitchen from './components/views/Kitchen/Kitchen';
+import BookedTable from './components/views/BookedTable/BookedTable';
+import NewBookedTable from './components/views/NewBookedTable/NewBookedTable';
+import NewBookedEvent from './components/views/NewBookedEvent/NewBookedEvent';
+import BookedEvent from './components/views/BookedEvent/BookedEvent';
+import NewOrder from './components/views/NewOrder/NewOrder';
+import Order from './components/views/Order/Order';
 
 function App() {
   return (
@@ -19,9 +25,15 @@ function App() {
           <Route exact path={`${process.env.PUBLIC_URL}/login`} component={Login} />
           <Route exact path={`${process.env.PUBLIC_URL}/tables`} component={Tables} />
           <Route exact path={`${process.env.PUBLIC_URL}/tables/booking`} component={TablesBooking} />
+          <Route exact path={`${process.env.PUBLIC_URL}/tables/booking/new`} component={BookedTable} />
+          <Route exact path={`${process.env.PUBLIC_URL}/tables/booking/:id`} component={NewBookedTable} />
           <Route exact path={`${process.env.PUBLIC_URL}/tables/event`} component={TablesEvent} />
+          <Route exact path={`${process.env.PUBLIC_URL}/tables/event/new`} component={NewBookedEvent} />
+          <Route exact path={`${process.env.PUBLIC_URL}/tables/event/:id`} component={BookedEvent} />
           <Route exact path={`${process.env.PUBLIC_URL}/waiter`} component={Waiter} />
           <Route exact path={`${process.env.PUBLIC_URL}/waiter/order`} component={WaiterOrder} />
+          <Route exact path={`${process.env.PUBLIC_URL}/waiter/order/new`} component={NewOrder} />
+          <Route exact path={`${process.env.PUBLIC_URL}/waiter/order/:id`} component={Order} />
           <Route exact path={`${process.env.PUBLIC_URL}/kitchen`} component={Kitchen} />
         </Switch>
       </MainLayout>
