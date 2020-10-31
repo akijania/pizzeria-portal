@@ -7,8 +7,4 @@ describe('Component Tables', () => {
     const component = shallow(<Tables />);
     expect(component).toBeTruthy();
   });
-  it('should render title', () => {
-    const component = shallow(<Tables />);
-    expect(component.exists('h2')).toEqual(true);
-  });
 });
