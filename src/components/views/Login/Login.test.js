@@ -7,8 +7,4 @@ describe('Component Login', () => {
     const component = shallow(<Login />);
     expect(component).toBeTruthy();
   });
-  it('should render title', () => {
-    const component = shallow(<Login />);
-    expect(component.exists('h2')).toEqual(true);
-  });
 });

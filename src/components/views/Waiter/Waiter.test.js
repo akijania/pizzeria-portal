@@ -7,8 +7,4 @@ describe('Component Waiter', () => {
     const component = shallow(<Waiter />);
     expect(component).toBeTruthy();
   });
-  it('should render title', () => {
-    const component = shallow(<Waiter />);
-    expect(component.exists('h2')).toEqual(true);
-  });
 });

@@ -2,4 +2,13 @@
 
 .component {
   padding: $base-size;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  padding: $base-size;
+  display: flex;
+  justify-content: center;
 }
