@@ -65,7 +65,7 @@ const Tables = () => {
   return (
     <div className={styles.component}>
       <MuiPickersUtilsProvider utils={DateFnsUtils}>
-        <Grid container justify="space-around">
+        <Grid container justify="space-around" className={styles.component}>
           <KeyboardDatePicker
             margin="normal"
             id="date-picker-dialog"
