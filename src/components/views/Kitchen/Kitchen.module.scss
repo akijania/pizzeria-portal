@@ -2,4 +2,13 @@
 
 .component {
   padding: $base-size;
+  margin-top: 20px;
+  font-family: Roboto;  
+  text-align: center;;
+}
+
+.button {
+  padding: $base-size;
+  display: flex;
+  justify-content: center;
 }

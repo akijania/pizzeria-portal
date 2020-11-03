@@ -3,3 +3,19 @@
 .component {
   padding: $base-size;
 }
+
+.title {
+  text-align: center;
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 200;
+}
+
+.button {
+  padding: $base-size;
+  display: flex;
+  justify-content: center;
+}
+.input {
+  min-width: 120px;
+}

@@ -17,6 +17,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
+import {Link} from 'react-router-dom';
 
 const useStyles = makeStyles({
   table: {
@@ -42,8 +43,8 @@ const rows = [
   createData('5:00 PM', '', 837),
   createData('5:30 PM'),
   createData('6:00 PM'),
-  createData('6:30 PM'),
-  createData('7:00 PM'),
+  createData('6:30 PM', 156),
+  createData('7:00 PM', 156),
   createData('7:30 PM',156),
   createData('8:00 PM'),
   createData('8:30 PM'),
@@ -112,7 +113,10 @@ const Tables = () => {
                 <TableCell align="left">
                   {row.table1 && (
                     <Button
-                      to={`${process.env.PUBLIC_URL}/table/booking/${row.table1}`}
+                      variant="contained" 
+                      color="secondary"
+                      component={Link}
+                      to={`${process.env.PUBLIC_URL}/tables/booking/${row.table1}`}
                     >
                       {row.table1}
                     </Button>
@@ -121,7 +125,10 @@ const Tables = () => {
                 <TableCell align="left">
                   {row.table2 && (
                     <Button
-                      to={`${process.env.PUBLIC_URL}/table/booking/${row.table2}`}
+                      variant="contained" 
+                      color="secondary"
+                      component={Link}
+                      to={`${process.env.PUBLIC_URL}/tables/booking/${row.table2}`}
                     >
                       {row.table2}
                     </Button>
@@ -130,7 +137,10 @@ const Tables = () => {
                 <TableCell align="left">
                   {row.table3 && (
                     <Button
-                      to={`${process.env.PUBLIC_URL}/table/booking/${row.table3}`}
+                      variant="contained" 
+                      color="secondary"
+                      component={Link}
+                      to={`${process.env.PUBLIC_URL}/tables/booking/${row.table3}`}
                     >
                       {row.table3}
                     </Button>
