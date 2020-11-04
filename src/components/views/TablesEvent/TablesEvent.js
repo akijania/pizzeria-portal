@@ -8,7 +8,7 @@ const events = [{ id: '125abc' }, { id: '2763dhf' }, { id: '274dkd' }];
 
 const TablesEvent = () => (
   <Paper className={styles.component}>
-    <h2>Events:</h2>
+    <h2 className={styles.title}>Events:</h2>
     <Button
       className={styles.link}
       variant="contained"

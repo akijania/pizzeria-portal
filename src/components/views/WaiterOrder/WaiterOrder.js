@@ -8,8 +8,8 @@ const orders = [{ id: '123abc' }, { id: '124abc' }, { id: '125abc' }];
 
 const WaiterOrder = () => (
   <Paper className={styles.component}>
-    <h2>Orders:</h2>
-    <Button className={styles.link} variant="contained" color='primary' component={Link} to={`${process.env.PUBLIC_URL}/waiter/order/now`} activeClassName='active'>New order</Button>
+    <h2 className={styles.title}>Orders:</h2>
+    <Button className={styles.link} variant="contained" color='primary' component={Link} to={`${process.env.PUBLIC_URL}/waiter/order/new`} activeClassName='active'>New order</Button>
     {orders.length ? (
       orders.map((order) => (
         <Button
@@ -17,7 +17,7 @@ const WaiterOrder = () => (
           className={styles.link}
           variant="contained"
           component={Link}
-          to={`${process.env.PUBLIC_URL}/tables/event/${order.id}`}
+          to={`${process.env.PUBLIC_URL}/waiter/order/${order.id}`}
           activeClassName="active"
         >
           {order.id}

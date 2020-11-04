@@ -107,7 +107,7 @@ class Kitchen extends React.Component {
   render() {
     return (
       <div className={styles.component}>
-        <h2>Kitchen</h2>
+        <h2 className={styles.title}>Kitchen</h2>
         {orders.map((order) => (
           <Paper key={order.id} className={styles.component}>
             <Table>

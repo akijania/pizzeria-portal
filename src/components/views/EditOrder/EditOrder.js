@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './NewOrder.module.scss';
+import styles from './EditOrder.module.scss';
 import Paper from '@material-ui/core/Paper';
 import Cake from '../../features/Cake/Cake';
 import Breakfast from '../../features/Breakfast/Breakfast';
@@ -182,18 +182,18 @@ const menu = {
   ],
 };
 
-const NewOrder = () => (
+const EditOrder = () => (
   <Paper className={styles.component}>
-    <h2 className={styles.title}>New Order</h2>
+    <h2 className={styles.title}>Edit Order</h2>
     <Cake cake={menu.product[0]} />
     <Breakfast breakfast={menu.product[1]} />
     <Pizza pizza={menu.product[2]} />
     <Salad salad={menu.product[3]} />
     <div className={styles.button}>
       <Button variant="contained" color="primary">
-        Order
+        Edit order
       </Button>
     </div>
   </Paper>
 );
-export default NewOrder;
+export default EditOrder;

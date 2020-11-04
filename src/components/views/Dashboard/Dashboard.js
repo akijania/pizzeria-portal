@@ -11,10 +11,10 @@ const events = [{ id: '125abc' }, { id: '2763dhf' }, { id: '274dkd' }];
 
 const Dashboard = () => (
   <Paper className={styles.component}>
-    <h2>Number of orders: {orders.length}</h2>
+    <h2 className={styles.title}>Number of orders: {orders.length}</h2>
     <Grid container spacing={3}>
       <Grid item xs={6} className={styles.component}>
-        <h2>Tables Booking:</h2>
+        <h2 className={styles.title}>Tables Booking:</h2>
         {bookings.length ? (
           bookings.map((booking) => (
             <Button
@@ -33,7 +33,7 @@ const Dashboard = () => (
         )}
       </Grid>
       <Grid item xs={6} className={styles.component}>
-        <h2>Events:</h2>
+        <h2 className={styles.title}>Events:</h2>
         {events.length ? (
           events.map((event) => (
             <Button

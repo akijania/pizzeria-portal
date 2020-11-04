@@ -2,11 +2,6 @@
 
 .component {
   padding: $base-size;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  font-family: Roboto;  
-  text-align: center;;
 }
 
 .title {
@@ -16,6 +11,8 @@
   font-weight: 400;
 }
 
-.link {
-  margin: $base-size;
+.button {
+  padding: $base-size;
+  display: flex;
+  justify-content: center;
 }
