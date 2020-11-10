@@ -13,6 +13,7 @@ class Waiter extends React.Component {
   static propTypes = {
     tables: PropTypes.array,
     fetchTables: PropTypes.func,
+    fetchNewStatus: PropTypes.func,
     loading: PropTypes.shape({
       active: PropTypes.bool,
       error: PropTypes.oneOfType([PropTypes.bool,PropTypes.string]),
@@ -24,25 +25,26 @@ class Waiter extends React.Component {
     fetchTables();
   }
 
-  renderActions(status) {
+  renderActions(status, id) {
+    const { fetchNewStatus} = this.props;
     switch (status) {
       case 'free':
         return (
           <>
-            <Button>thinking</Button>
-            <Button>new order</Button>
+            <Button onClick={() => fetchNewStatus('thinking', id)}>thinking</Button>
+            <Button onClick={() => fetchNewStatus('ordered', id)}>new order</Button>
           </>
         );
       case 'thinking':
-        return <Button>new order</Button>;
+        return <Button onClick={() => fetchNewStatus('ordered', id)}>new order</Button>;
       case 'ordered':
-        return <Button>prepared</Button>;
+        return <Button onClick={() => fetchNewStatus('prepared', id)}>prepared</Button>;
       case 'prepared':
-        return <Button>delivered</Button>;
+        return <Button onClick={() => fetchNewStatus('delivered', id)}>delivered</Button>;
       case 'delivered':
-        return <Button>paid</Button>;
+        return <Button onClick={() => fetchNewStatus('paid', id)}>paid</Button>;
       case 'paid':
-        return <Button>free</Button>;
+        return <Button onClick={() => fetchNewStatus('free', id)}>free</Button>;
       default:
         return null;
     }
@@ -95,7 +97,7 @@ class Waiter extends React.Component {
                       </Button>
                     )}
                   </TableCell>
-                  <TableCell>{this.renderActions(row.status)}</TableCell>
+                  <TableCell>{this.renderActions(row.status, row.id)}</TableCell>
                 </TableRow>
               ))}
             </TableBody>
