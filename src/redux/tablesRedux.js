@@ -39,7 +39,9 @@ export const fetchStatusFromAPI = (status, id) => {
   return (dispatch) => {
     dispatch(fetchStarted());
 
-    Axios.get(`${api.url}/api/${api.tables}`)
+    Axios.put(`${api.url}/api/${api.tables}/${id}`, {
+      status: status,
+    })
       .then(() => {
         dispatch(fetchNewStatus(id, status));
       })
